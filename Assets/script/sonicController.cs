@@ -45,24 +45,32 @@ public class sonicController : MonoBehaviour {
 
 	}
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.tag=="Jump"){
-			anim.SetTrigger("Jump");
-			GetComponent<Rigidbody2D>().gravityScale*=-1;
-			Destroy(other.gameObject);
-			FlipDown ();
+		
+		if (other.CompareTag("Jump"))
+		{
+            Destroy(other.gameObject);
+            anim.SetTrigger("Jump");
+			this.GetComponent<Rigidbody2D>().gravityScale *= -1;			
+			FlipDown();
+			return;
 		}
-		if(other.tag=="enemy"){
+		else if (other.CompareTag("enemy"))
+		{
 			anim.SetTrigger("die");
-			isRun=false;
-			GetComponent<Rigidbody2D>().gravityScale=1;
+			isRun = false;
+			GetComponent<Rigidbody2D>().gravityScale = 1;
 			GetComponent<Rigidbody2D>().AddForce(Vector2.right * -100);
 			GetComponent<Rigidbody2D>().AddForce(Vector2.up * 150);
 
-			this.GetComponent<Collider2D>().enabled=false;
-		}
-		if(other.tag == "turn"){
+			this.GetComponent<Collider2D>().enabled = false;
+            return;
+        }
+		else if (other.CompareTag("turn"))
+		{
 			Flip();
-		}
+            return;
+        }
+		else { }
 	}
 	void Flip ()
 	{
