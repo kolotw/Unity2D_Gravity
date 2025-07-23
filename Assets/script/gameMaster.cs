@@ -80,7 +80,7 @@ public class gameMaster : MonoBehaviour {
                 SceneManager.LoadScene("15");
                 break;
             case "15":
-				SceneManager.LoadScene("menu");
+				SceneManager.LoadScene("00home");
 				break;			
 
 			default:

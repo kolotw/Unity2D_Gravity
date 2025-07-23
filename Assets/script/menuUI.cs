@@ -11,50 +11,53 @@ public class menuUI : MonoBehaviour {
 		print (name);
         switch (name)
         {
+            case "00home":
+                SceneManager.LoadScene("menu");
+                break;
             case "01":
-                SceneManager.LoadScene("02");
+                SceneManager.LoadScene("01");
                 break;
             case "02":
-                SceneManager.LoadScene("03");
+                SceneManager.LoadScene("02");
                 break;
             case "03":
-                SceneManager.LoadScene("04");
+                SceneManager.LoadScene("03");
                 break;
             case "04":
-                SceneManager.LoadScene("05");
+                SceneManager.LoadScene("04");
                 break;
             case "05":
-                SceneManager.LoadScene("06");
+                SceneManager.LoadScene("05");
                 break;
             case "06":
-                SceneManager.LoadScene("07");
+                SceneManager.LoadScene("06");
                 break;
             case "07":
-                SceneManager.LoadScene("08");
+                SceneManager.LoadScene("07");
                 break;
             case "08":
-                SceneManager.LoadScene("09");
+                SceneManager.LoadScene("08");
                 break;
             case "09":
-                SceneManager.LoadScene("10");
+                SceneManager.LoadScene("09");
                 break;
             case "10":
-                SceneManager.LoadScene("11");
+                SceneManager.LoadScene("10");
                 break;
             case "11":
-                SceneManager.LoadScene("12");
+                SceneManager.LoadScene("11");
                 break;
             case "12":
-                SceneManager.LoadScene("13");
+                SceneManager.LoadScene("12");
                 break;
             case "13":
-                SceneManager.LoadScene("14");
+                SceneManager.LoadScene("13");
                 break;
             case "14":
-                SceneManager.LoadScene("15");
+                SceneManager.LoadScene("14");
                 break;
             case "15":
-                SceneManager.LoadScene("menu");
+                SceneManager.LoadScene("15");
                 break;
 
             default:
