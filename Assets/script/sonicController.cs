@@ -14,6 +14,8 @@ public class sonicController : MonoBehaviour {
 	void Start () {
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
+		if(anim == null )
+			anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
